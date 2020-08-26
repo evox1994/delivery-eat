@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../fonts/Circe-ExtraBold.eot');
+    src: url('../fonts/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Circe-ExtraBold.svg#Circe-ExtraBold') format('svg'),
+         url('../fonts/Circe-ExtraBold.ttf') format('truetype'),
+         url('../fonts/Circe-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../fonts/Circe-Bold.eot');
+    src: url('../fonts/Circe-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Circe-Bold.svg#Circe-Bold') format('svg'),
+         url('../fonts/Circe-Bold.ttf') format('truetype'),
+         url('../fonts/Circe-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../fonts/Circe-Regular.eot');
+    src: url('../fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Circe-Regular.svg#Circe-Regular') format('svg'),
+         url('../fonts/Circe-Regular.ttf') format('truetype'),
+         url('../fonts/Circe-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../fonts/Circe-Light.eot');
+    src: url('../fonts/Circe-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Circe-Light.svg#Circe-Light') format('svg'),
+         url('../fonts/Circe-Light.ttf') format('truetype'),
+         url('../fonts/Circe-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../fonts/Circe-ExtraLight.eot');
+    src: url('../fonts/Circe-ExtraLight.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Circe-ExtraLight.svg#Circe-ExtraLight') format('svg'),
+         url('../fonts/Circe-ExtraLight.ttf') format('truetype'),
+         url('../fonts/Circe-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../fonts/Circe-Thin.eot');
+    src: url('../fonts/Circe-Thin.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Circe-Thin.svg#Circe-Thin') format('svg'),
+         url('../fonts/Circe-Thin.ttf') format('truetype'),
+         url('../fonts/Circe-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+html,
+body {
+	position: relative;
+}
+body {
+	min-width: 300px;
+	text-align: center;
+	overflow-x: hidden;
+	-webkit-text-size-adjust: none;
+	color: #000000;
+    font-family: 'Circe', sans-serif;
+}
+body.no-scroll {
+	height: 100vh !important;
+	overflow: hidden !important;
+}
+body .body-wrap {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+button {
+    font-family: 'Circe', sans-serif;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+button:hover {
+    cursor: pointer;
+}
+li{
+	list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+label.error{
+	display: none !important;
+}
+input.error,textarea.error{
+	border-color: #ff0000 !important;
+}
+.fancybox-inner{
+	overflow: visible !important;
+}
+.b{
+	position: relative;
+}
+.container {
+	position: relative;
+	max-width: 1230px;
+	padding: 0 30px;
+	box-sizing: border-box;
+	margin: 0px auto;
+}
+input::-webkit-input-placeholder {
+	color: #a0a0a0;
+}
+input:-moz-placeholder {
+    color: #a0a0a0;
+}
+textarea::-webkit-input-placeholder {
+    color: #a0a0a0;
+}
+textarea:-moz-placeholder {
+    color: #a0a0a0;
+}
+.mobile-btn {
+	display: none;
+    position: relative;
+	width: 34px;
+	height: 34px;
+	z-index: 1;
+    cursor: pointer;
+}
+.mobile-btn .mobile-btn-el{
+	position: absolute;
+	border-radius: 2px;
+	top: calc(50% - 1px);
+	left: 5px;
+	width: 24px;
+	height: 2px;
+	background-color: #000000;
+	opacity: 1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.mobile-btn::before {
+    content: '';
+    position: absolute;
+    border-radius: 2px;
+    left: 5px;
+    top: calc(50% - 1px);
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+    -webkit-transform: translateY(-7px);
+    -moz-transform: translateY(-7px);
+    -ms-transform: translateY(-7px);
+    transform: translateY(-7px);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.mobile-btn::after {
+	content: '';
+	position: absolute;
+    border-radius: 2px;
+    left: 5px;
+    top: calc(50% - 1px);
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+    -webkit-transform: translateY(7px);
+    -moz-transform: translateY(7px);
+    -ms-transform: translateY(7px);
+    transform: translateY(7px);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.close-btn {
+	display: none;
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	z-index: 10;
+    cursor: pointer;
+    top: 25px;
+    right: 10px;
+}
+.close-btn::after {
+	content: '';
+	position: absolute;
+    border-radius: 100px;
+    left: 5px;
+    top: calc(50% - 1px);
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.close-btn::before {
+	content: '';
+    position: absolute;
+    border-radius: 2px;
+    left: 5px;
+    top: calc(50% - 1px);
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.mobile-menu {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+    bottom: 0;
+	left: -200%;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 30px 50px;
+	background-color: #ffffff;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.mobile-menu.active {
+	left: 0;
+}
+
+.policy-text {
+    display: inline-block;
+    max-width: 100%;
+    font-size: 12px;
+    color: #2d2d2d;
+    line-height: 1.2;
+    position: relative;
+    text-align: left;
+    padding-left: 35px;
+    margin-top: 15px;
+}
+.policy-text a {
+    color: #2d2d2d;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.policy-text a:hover {
+    color: #ffca48;
+}
+.policy-text .radio-btn {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #f2f3f6;
+    background-color: #f2f3f6;
+    border-radius: 5px;
+    left: 0;
+    top: calc(50% - 12.5px);
+}
+.policy-text .radio-btn.error {
+    border-color: #ff0000;
+}
+.policy-text .radio-btn:hover {
+    cursor: pointer;
+}
+.policy-text .radio-btn.active::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    left: 1px;
+    top: 13px;
+    background-color: #0c112c;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.policy-text .radio-btn.active::after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 2px;
+    position: absolute;
+    left: 7px;
+    top: 11px;
+    background-color: #0c112c;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+}	
+@media screen and (max-width: 1280px){
+	
+}
+@media screen and (max-width: 1024px){
+    .mobile-btn, .mobile-menu, .close-btn {
+        display: block;
+    }
+}
+@media screen and (max-width: 768px){
+    .container {
+        padding: 0 10px;
+    }
+    .mobile-menu {
+        padding: 10px 10px 50px;
+    }
+}
