@@ -312,6 +312,9 @@ body {
 .footer-nav ul > li a {
 	color: #ffffff;
 }
+.footer-nav ul > li a:hover {
+	opacity: 0.5;
+}
 /*Заказ по телефону в футере*/
 .footer-order-phone {
 	width: calc(100% - 400px);
