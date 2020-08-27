@@ -92,6 +92,9 @@ body {
 	background-color: #eeeeee;
 	font-size: 14px;
 }
+.header .pa-btn:hover {
+	background-color: #dddddd;
+}
 /*Нижний блок в хедере*/
 .header-bottom {
 	padding: 10px 0;
@@ -124,8 +127,12 @@ body {
 .header-nav > ul > li:last-child {
 	margin-right: 0;
 }
+.header-nav > ul > li a:hover {
+	opacity: 0.5;
+}
 .header-nav > ul > li.active a {
 	color: #26a683;
+	opacity: 1;
 }
 /*Кнопки корзины в хедере desktop*/
 .header .cart-btn {
@@ -139,6 +146,9 @@ body {
 	font-size: 14px;
 	overflow: hidden;
 	white-space: nowrap;
+}
+.header .cart-btn:hover {
+	background-color: #dd1d34;
 }
 .header .cart-btn span {
 	display: inline-block;
@@ -462,6 +472,9 @@ body {
 	color: #ffffff;
 	background-color: #ff3f56;
 	text-align: center;
+}
+.b-btn:hover {
+	background-color: #dd1d34;
 }
 
 /*Стили стандартного текстового блока*/
@@ -940,17 +953,21 @@ body {
 }
 .b-catalog > li .flex .info .info-wrap {
 	display: none;
-	width: 220px;
-	max-height: 220px;
-	border-radius: 4px;
-	background-color: #70544f;
-	color: #ffffff;
-	padding: 10px;
 	position: absolute;
 	left: -20px;
 	bottom: calc(100% + 10px);
 	line-height: 1.2;
 	z-index: 1;
+}
+.b-catalog > li .flex .info .info-wrap-content {
+	width: 220px;
+	/*max-height: 220px;*/
+	border-radius: 4px;
+	background-color: #70544f;
+	color: #ffffff;
+	padding: 10px;
+	/*overflow-x: hidden;
+	overflow-y: auto;*/
 }
 .b-catalog > li:nth-child(4n) .flex .info .info-wrap {
 	left: auto;
@@ -1013,7 +1030,7 @@ body {
 	width: 100%;
 	text-align: center;
 	padding: 8px 10px;
-	border-radius: 10px;
+	border-radius: 8px;
 	font-size: 14px;
 	white-space: nowrap;
 	overflow: hidden;
@@ -1023,8 +1040,12 @@ body {
 	-ms-transition: all 0.3s;
 	transition: all 0.3s;
 }
+.b-catalog > li .params ul > li:hover {
+	color: #26a683;
+}
 .b-catalog > li .params ul > li.active {
 	background-color: #ffffff;
+	color: #000000;
 }
 .b-catalog > li .select-param {
 	position: relative;

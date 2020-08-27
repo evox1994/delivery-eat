@@ -150,6 +150,11 @@ $(document).ready(function(){
 		if ( !$(this).hasClass('active') ){
 			$(this).parent('ul').find('li').removeClass('active');
 			$(this).addClass('active');
+
+			if ( $(this).attr('data-cart') ){
+				var price_new = $(this).attr('data-cart');
+				$(this).parents('.bottom').find('.price span').text(price_new);
+			}
 		}
 	});
 
