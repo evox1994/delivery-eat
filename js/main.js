@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	/* Локализация datepicker */
-	/*$.datepicker.regional['ru'] = {
+	$.datepicker.regional['ru'] = {
 		closeText: 'Закрыть',
 		prevText: 'Предыдущий',
 		nextText: 'Следующий',
@@ -18,7 +18,7 @@ $(document).ready(function(){
 		showMonthAfterYear: false,
 		yearSuffix: ''
 	};
-	$.datepicker.setDefaults($.datepicker.regional['ru']);*/
+	$.datepicker.setDefaults($.datepicker.regional['ru']);
 
 	$(document).on('click','.radio-btn',function(){
 		if ( $(this).hasClass('active') ) {
@@ -238,7 +238,9 @@ $(document).ready(function(){
 		$('input[name="payment-type"]:checked').parents('.b-form-wrap').find('.b-payment-descr').find('.item[data-description="'+el+'"]').addClass('active');
 	});
 
-	//$('.date-inp input').datepicker();
+	$('.date-inp input').datepicker({
+		autoSize: false
+	});
 
 	function HeaderScroll(){
 		if ( $('.body-wrap').hasClass('main-page') ){
