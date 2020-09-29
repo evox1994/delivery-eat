@@ -153,6 +153,8 @@ $(document).ready(function(){
 		slidesToShow: 2
 	});
 
+	$('.about-slider').slick();
+
 	$(document).on('click',function(e){
 		/*Скрипт для отображения информации в карточке товара каталога*/
 		if ( $(e.target).closest('.info-btn').length ){
@@ -181,7 +183,9 @@ $(document).ready(function(){
 
 			if ( $(this).attr('data-cart') ){
 				var price_new = $(this).attr('data-cart');
-				$(this).parents('.bottom').find('.price span').text(price_new);
+				var price_old = $(this).attr('data-cart-old');
+				$(this).parents('.bottom').find('.price').find('.price-new span').text(price_new);
+				$(this).parents('.bottom').find('.price').find('.price-old span').text(price_old);
 			}
 		}
 	});
