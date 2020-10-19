@@ -246,6 +246,15 @@ $(document).ready(function(){
 		autoSize: false
 	});
 
+	function CartBtnVisibility(){
+	    var $btn = $('.b-cart-btn');
+	    var cart = Number($btn.find('span').text());
+	    if ( cart > 0 ){
+	        $btn.addClass('active');
+	    }
+	}
+	CartBtnVisibility();
+
 	function HeaderScroll(){
 		if ( $('.body-wrap').hasClass('main-page') ){
 			var ww = $(window).width();
