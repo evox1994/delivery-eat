@@ -2411,6 +2411,21 @@ body {
 .b-bonuses > li .text span {
 	color: #000000;
 }
+.b-bonuses-info {
+	margin-top: 40px;
+	font-size: 18px;
+	color: #a2a2a2;
+	line-height: 1.2;
+}
+.b-bonuses-info > li {
+	margin-bottom: 10px;
+}
+.b-bonuses-info > li:last-child {
+	margin-bottom: 0;
+}
+.b-bonuses-info span {
+	color: #000000;
+}
 
 .b-order-comment {
 	margin-top: 30px;
@@ -3381,6 +3396,13 @@ body {
 	}
 	.b-bonuses > li .text {
 		font-size: 14px;
+	}
+	.b-bonuses-info {
+		margin-top: 20px;
+		font-size: 14px;
+	}
+	.b-bonuses-info > li {
+		margin-bottom: 5px;
 	}
 
 	.b-payment-descr {
