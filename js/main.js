@@ -251,6 +251,8 @@ $(document).ready(function(){
 	    var cart = Number($btn.find('span').text());
 	    if ( cart > 0 ){
 	        $btn.addClass('active');
+	        $('.header .cart-btn-wrap').find('.cart-drop .empty').removeClass('active');
+	        $('.header .cart-btn-wrap').find('.cart-drop .order').addClass('active');
 	    }
 	}
 	CartBtnVisibility();
