@@ -3289,6 +3289,79 @@ body {
 	bottom: 15px;
 }
 
+.b-error {
+	padding: 50px 0;
+	background-color: #ffffff;
+}
+.b-error .logo {
+	height: 65px;
+}
+.b-error .logo img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+}
+.b-error .wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+	min-height: calc(100vh - 215px);
+	margin-top: 50px;
+}
+.b-error .wrap .content {
+	width: 100%;
+}
+.b-error .wrap .content .title {
+	display: block;
+	font-size: 220px;
+	font-weight: 800;
+	color: #ff3f56;
+	line-height: 1;
+}
+.b-error .wrap .content .emoji {
+	margin-top: 30px;
+}
+.b-error .wrap .content .emoji img {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+.b-error .wrap .content .subtitle {
+	display: block;
+	font-size: 36px;
+	font-weight: 700;
+	margin-top: 25px;
+}
+.b-error .wrap .content .text {
+	display: block;
+	font-size: 24px;
+	margin: 20px auto 0;
+	max-width: 530px;
+}
+.b-error .wrap .content .b-btn {
+	font-size: 18px;
+	padding: 17px 10px;
+	margin: 50px auto 0;
+	position: relative;
+	max-width: 230px;
+}
+.b-error .wrap .content .b-btn:before {
+	content: '';
+	width: 58px;
+	height: 60px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-image: url('../i/err-arr.png');
+	position: absolute;
+	right: calc(100% + 30px);
+	bottom: 50%;
+}
 
 
 
@@ -4007,6 +4080,43 @@ body {
 	.b-delivery-map {
 		height: 400px;
 		margin-top: 30px;
+	}
+
+	.b-error {
+		padding: 40px 0;
+	}
+	.b-error .wrap {
+		min-height: calc(100vh - 185px);
+		margin-top: 40px;
+	}
+	.b-error .wrap .content .title {
+		font-size: 120px;
+	}
+	.b-error .wrap .content .emoji {
+		margin-top: 20px;
+	}
+	.b-error .wrap .content .emoji img {
+		max-height: 60px;
+	}
+	.b-error .wrap .content .subtitle {
+		margin-top: 15px;
+		font-size: 24px;
+	}
+	.b-error .wrap .content .text {
+		margin-top: 10px;
+		font-size: 18px;
+		max-width: 370px;
+	}
+	.b-error .wrap .content .b-btn {
+		padding: 15px 10px;
+		font-size: 14px;
+		margin-top: 30px;
+		max-width: 210px;
+	}
+	.b-error .wrap .content .b-btn:before {
+		width: 48px;
+		height: 50px;
+		right: calc(100% + 10px);
 	}
 }
 @media screen and (max-width: 580px){
