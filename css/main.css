@@ -2225,6 +2225,19 @@ body {
 }
 .b-input {
 	position: relative;
+	display: block;
+}
+.b-input.sum-inp:before {
+	content: '₽';
+	font-size: 20px;
+	font-weight: 700;
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 .b-form-flex .b-input {
 	width: calc(100% - 230px);
@@ -2242,6 +2255,9 @@ body {
 }
 .b-input textarea {
 	resize: none;
+}
+.b-input.sum-inp input {
+	padding-right: 40px;
 }
 .b-select {
 	position: relative;
@@ -2585,6 +2601,54 @@ body {
 	font-size: 18px;
 	padding: 17px 10px;
 }
+.b-sum-blocked {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	cursor: pointer;
+	width: 100px;
+}
+.b-sum-blocked .btn {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0px 1px 6px 0px rgba(0, 31, 65, 0.15);
+	background-color: #ffffff;
+	margin-right: 10px;
+}
+.b-sum-blocked .btn:before {
+	content: '';
+	width: 12px;
+	height: 12px;
+	background-color: #ff3f56;
+	border-radius: 50%;
+	position: absolute;
+	left: calc(50% - 6px);
+	top: calc(50% - 6px);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+}
+.b-sum-blocked.active .btn:before {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+.b-sum-blocked span {
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+}
 
 .b-delivery-types .b-delivery-types-list {
 	display: -webkit-box;
@@ -2802,7 +2866,25 @@ body {
 	font-size: 14px;
 	line-height: 1.2;
 }
-
+.b-payment-descr .item .b-payback {
+	width: 100%;
+	max-width: 630px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.b-payment-descr .item .b-payback .name {
+	width: calc(100% - 300px);
+	max-width: 250px;
+	font-size: 16px;
+	color: #a2a2a2;
+	text-align: left;
+}
+.b-payment-descr .item .b-payback .b-input {
+	max-width: 180px;
+}
 
 .b-order-accept {
 	display: -webkit-box;
@@ -3065,6 +3147,30 @@ body {
 .b-about .b-text {
 	margin: 50px auto 0;
 	max-width: 1030px;
+}
+.b-about .clickbait {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: #ffffff;
+	border-radius: 10px;
+	max-width: 760px;
+	padding: 50px;
+	margin: 50px auto 0;
+}
+.b-about .clickbait .text {
+	width: calc(100% - 310px);
+	font-size: 30px;
+	font-weight: 700;
+	text-align: left;
+}
+.b-about .clickbait .b-btn {
+	font-size: 18px;
+	padding: 17px 10px;
+	max-width: 260px;
 }
 
 .b-delivery {
@@ -3559,9 +3665,15 @@ body {
 		width: 150px;
 		font-size: 14px;
 	}
+	.b-input.sum-inp:before {
+		font-size: 16px;
+	}
 	.b-input input, .b-input textarea {
 		padding: 14px 15px;
 		font-size: 14px;
+	}
+	.b-input.sum-inp input {
+		padding-right: 35px;
 	}
 	.b-form-flex .b-input {
 		width: calc(100% - 160px);
@@ -3654,6 +3766,9 @@ body {
 		max-width: calc(100% - 26px);
 		font-size: 14px;
 	}
+	.b-sum-blocked span {
+		font-size: 14px;
+	}
 
 	.b-delivery-types .b-delivery-types-list > li {
 		margin-right: 20px;
@@ -3706,6 +3821,9 @@ body {
 	.b-payment-descr .item .text {
 		width: calc(100% - 220px);
 		font-size: 12px;
+	}
+	.b-payment-descr .item .b-payback .name {
+		font-size: 14px;
 	}
 
 	.b-order-comment {
@@ -3833,6 +3951,20 @@ body {
 	.b-about .b-text {
 		margin-top: 30px;
 	}
+	.b-about .clickbait {
+		padding: 20px;
+		margin: 30px auto 0;
+		max-width: 520px;
+	}
+	.b-about .clickbait .text {
+		font-size: 18px;
+		width: calc(100% - 260px);
+	}
+	.b-about .clickbait .b-btn {
+		font-size: 14px;
+		padding: 15px 10px;
+		max-width: 240px;
+	}
 
 	.b-delivery {
 		display: block;
@@ -3947,8 +4079,34 @@ body {
 		padding: 0;
 	}
 
+	.b-payment-descr .item .b-payback {
+		display: block;
+	}
+	.b-payment-descr .item .b-payback .name {
+		width: 100%;
+		max-width: none;
+		text-align: center;
+	}
+	.b-payment-descr .item .b-payback .b-input {
+		margin: 10px auto 0;
+	}
+	.b-payment-descr .item .b-payback .b-sum-blocked {
+		margin: 10px auto 0;
+	}
+
 	.b-actions {
 		display: block;
+	}
+
+	.b-about .clickbait {
+		display: block;
+	}
+	.b-about .clickbait .text {
+		width: 100%;
+		text-align: center;
+	}
+	.b-about .clickbait .b-btn {
+		margin: 20px auto 0;
 	}
 }
 @media screen and (max-width: 460px){

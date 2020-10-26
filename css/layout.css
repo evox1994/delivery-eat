@@ -147,6 +147,13 @@ textarea::-webkit-input-placeholder {
 textarea:-moz-placeholder {
     color: #a0a0a0;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"] {
+    -moz-appearance: none;
+}
 .mobile-btn {
 	display: none;
     position: relative;

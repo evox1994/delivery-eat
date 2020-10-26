@@ -239,7 +239,22 @@ $(document).ready(function(){
 		var el = $('input[name="payment-type"]:checked').attr('data-description');
 
 		$('input[name="payment-type"]:checked').parents('.b-form-wrap').find('.b-payment-descr').find('.item').removeClass('active');
+		$('input[name="payment-type"]:checked').parents('.b-form-wrap').find('.b-payment-descr').find('.item').find('input, select, textarea').prop('disabled', true);
 		$('input[name="payment-type"]:checked').parents('.b-form-wrap').find('.b-payment-descr').find('.item[data-description="'+el+'"]').addClass('active');
+		$('input[name="payment-type"]:checked').parents('.b-form-wrap').find('.b-payment-descr').find('.item[data-description="'+el+'"]').find('input, select, textarea').prop('disabled', false);
+		if ( $('input[name="payment-type"]:checked').parents('.b-form-wrap').find('.b-payment-descr').find('.item[data-description="'+el+'"]').find('.b-sum-blocked').hasClass('active') ){
+			$('input[name="payment-type"]:checked').parents('.b-form-wrap').find('.b-payment-descr').find('.item[data-description="'+el+'"]').find('.sum-inp input').prop('disabled', true);
+		}
+	});
+
+	$(document).on('click','.b-sum-blocked',function(){
+		if ( $(this).hasClass('active') ){
+			$(this).removeClass('active');
+			$(this).parents('.b-payback').find('.sum-inp input').prop('disabled',false);
+		} else {
+			$(this).addClass('active');
+			$(this).parents('.b-payback').find('.sum-inp input').prop('disabled',true);
+		}
 	});
 
 	$('.date-inp input').datepicker({
