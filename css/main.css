@@ -3363,6 +3363,44 @@ body {
 	bottom: 50%;
 }
 
+.popup {
+	text-align: center;
+	width: 95%;
+	max-width: 560px;
+	border-radius: 10px;
+	background-color: #ffffff;
+	padding: 40px 50px;
+}
+.popup.popup-policy {
+	max-width: 760px;
+	text-align: left;
+	padding: 30px;
+}
+.popup .title {
+	display: block;
+	font-size: 24px;
+	font-weight: 700;
+}
+.popup .b-form,
+.popup .b-text {
+	margin-top: 30px;
+}
+
+.b-policy {
+	margin-top: 50px;
+}
+.b-policy .item {
+	margin-top: 30px;
+}
+.b-policy .item .title {
+	display: block;
+	font-size: 24px;
+	font-weight: 700;
+}
+.b-policy .item .b-text {
+	margin-top: 20px;
+}
+
 
 
 @media screen and (max-width: 1230px){
@@ -4117,6 +4155,33 @@ body {
 		width: 48px;
 		height: 50px;
 		right: calc(100% + 10px);
+	}
+
+	.popup {
+		padding: 20px;
+	}
+	.popup.popup-policy {
+		padding: 20px;
+	}
+	.popup .title {
+		font-size: 20px;
+	}
+	.popup .b-form,
+	.popup .b-text {
+		margin-top: 20px;
+	}
+
+	.b-policy {
+		margin-top: 30px;
+	}
+	.b-policy .item {
+		margin-top: 20px;
+	}
+	.b-policy .item .title {
+		font-size: 20px;
+	}
+	.b-policy .item .b-text {
+		margin-top: 15px;
 	}
 }
 @media screen and (max-width: 580px){
