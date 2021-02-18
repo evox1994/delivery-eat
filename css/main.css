@@ -98,6 +98,29 @@ body {
 .header .pa-btn:hover {
 	background-color: #dddddd;
 }
+.header .pa-auth {
+	display: block;
+	width: 100%;
+	max-width: 150px;
+	text-align: left;
+}
+.header .pa-auth .icon {
+	display: inline-block;
+	vertical-align: middle;
+	width: 40px;
+	height: 40px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	border: 1px solid #dddddd;
+	margin-right: 10px;
+}
+.header .pa-auth .name {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+}
 /*Нижний блок в хедере*/
 .header-bottom {
 	padding: 10px 0;
@@ -1160,20 +1183,20 @@ body {
 	align-content: space-between;
 	flex-wrap: wrap;
 	position: relative;
-	/*width: 270px;
-	border-radius: 15px;*/
-	width: 370px;
+	width: 270px;
+	border-radius: 15px;
+	/*width: 370px;*/
 	box-shadow: 0px 7px 27px 0px rgba(0, 31, 65, 0.1);
 	background-color: #ffffff;
 	margin-top: 30px;
 	margin-right: calc((100% - 4*270px)/3);
 }
-/*.b-catalog > li:nth-child(4n) {
-	margin-right: 0;
-}*/
-.b-catalog > li:nth-child(3n) {
+.b-catalog > li:nth-child(4n) {
 	margin-right: 0;
 }
+/*.b-catalog > li:nth-child(3n) {
+	margin-right: 0;
+}*/
 .b-catalog > li .top {
 	width: 100%;
 }
@@ -2226,6 +2249,29 @@ body {
 }
 .b-form-flex .info-text a {
 	color: #44b759;
+}
+.b-form-flex .person-image {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: calc(100% - 230px);
+}
+.b-form-flex .person-image .image {
+	display: block;
+	width: 160px;
+	height: 160px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 1px solid #dddddd;
+	border-radius: 50%;
+}
+.b-form-flex .person-image .b-btn {
+	margin-left: 30px;
+	width: calc(100% - 190px);
+	max-width: 180px;
 }
 .b-input {
 	position: relative;
@@ -3415,16 +3461,16 @@ body {
 		display: block;
 	}
 
-	/*.b-catalog > li, .b-catalog > li:nth-child(4n) {
+	.b-catalog > li, .b-catalog > li:nth-child(4n) {
 		margin-right: calc((100% - 3*270px)/2);
 	}
 	.b-catalog > li:nth-child(3n) {
 		margin-right: 0;
-	}*/
-	.b-catalog > li {
+	}
+	/*.b-catalog > li {
 		width: calc(100%/3 - 20px);
 		margin-right: 30px;
-	}
+	}*/
 	.b-catalog > li:nth-child(4n) .flex .info .info-wrap {
 		right: auto;
 		left: -20px;
@@ -3542,22 +3588,22 @@ body {
 		display: block;
 	}
 
-	.b-catalog {
+	/*.b-catalog {
 		justify-content: space-between;
 	}
 	.b-catalog > li {
 		width: calc(50% - 15px);
 		max-width: 370px;
 		margin-right: 0;
-	}
+	}*/
 }
 @media screen and (max-width: 900px){
-	/*.b-catalog {
+	.b-catalog {
 		justify-content: space-around;
 	}
 	.b-catalog > li, .b-catalog > li:nth-child(4n) {
 		margin-right: 0;
-	}*/
+	}
 	.b-catalog > li .flex .info .info-wrap,
 	.b-catalog > li:nth-child(4n) .flex .info .info-wrap,
 	.b-catalog > li:nth-child(3n) .flex .info .info-wrap {
@@ -3699,13 +3745,20 @@ body {
 		display: block;
 	}
 	.b-catalog > li {
+		width: 100%;
+		max-width: 270px;
+	}
+	.b-catalog > li, .b-catalog > li:nth-child(4n), .b-catalog > li:nth-child(3n) {
+		margin: 15px auto 0;
+	}
+	/*.b-catalog > li {
 		margin: 15px auto 0;
 		width: 100%;
 		max-width: 370px;
 	}
 	.b-catalog > li:nth-child(3n) {
 		margin-right: auto;
-	}
+	}*/
 
 	.b-seo {
 		padding: 15px;
@@ -3798,6 +3851,17 @@ body {
 	.b-form-flex .name {
 		width: 150px;
 		font-size: 14px;
+	}
+	.b-form-flex .person-image {
+		width: calc(100% - 160px);
+	}
+	.b-form-flex .person-image .image {
+		width: 100px;
+		height: 100px;
+	}
+	.b-form-flex .person-image .b-btn {
+		margin-left: 15px;
+		width: calc(100% - 115px);
 	}
 	.b-input.sum-inp:before {
 		font-size: 16px;
@@ -4208,10 +4272,6 @@ body {
 	}
 }
 @media screen and (max-width: 580px){
-	/*.b-catalog > li, .b-catalog > li:nth-child(4n), .b-catalog > li:nth-child(3n) {
-		margin: 15px auto 0;
-	}*/
-
 	.b-cart-list > li {
 		display: block;
 		padding-right: 0;
@@ -4344,6 +4404,10 @@ body {
 	.b-form-flex .name {
 		width: 100%;
 	}
+	.b-form-flex .person-image {
+		width: 100%;
+		margin-top: 5px;
+	}
 	.b-form-flex .b-input, .b-form-flex .b-select, .b-form-flex .info {
 		width: 100%;
 		margin-top: 5px;
@@ -4410,12 +4474,12 @@ body {
 	}
 }
 @media screen and (max-width: 370px){
-	.b-catalog > li {
+	/*.b-catalog > li {
 		max-width: 300px;
 	}
 	.b-catalog > li .image {
 		height: 230px;
-	}
+	}*/
 
 	.b-new-products .card .image .material,
 	.b-cart-recomended .card .image .material {
